@@ -1,0 +1,70 @@
+.landing-page {
+    display: grid;
+
+    // grid-template-columns:[pile-start-column] minmax(22.6rem,1fr) 
+    // [pile-end-column play-area-start-column] minmax(50vw,2fr)
+    // [play-area-end-column deck-start-column] minmax(22.6rem,1fr)  [deck-end-column];
+
+    grid-template-columns: 
+    [full-start center-start] repeat(8, [col-start] minmax(min-content,1fr) [col-end])[center-end full-end];
+
+    @media only screen and (min-width:$bp-largest-2){
+        //for ultrawide screens
+     
+         //   grid-template-columns:[full-start body-start] repeat(8, [col-start] minmax(min-content, 1fr ) [col-end]) 
+         //   [body-end nav-start] minmax(min-content,$nav-width-ultrawide)  [nav-end full-end];
+
+           grid-template-columns:
+           [full-start] minmax(1rem, 1fr) [center-start] 
+           repeat(8, [col-start] minmax(min-content, 25rem ) [col-end]) 
+           [center-end] minmax(1rem, 1fr) [full-end];
+
+    }
+
+
+    grid-template-rows: 
+    [header-start] 100vh [header-end]
+    repeat(9,min-content) 
+    // this is for (1) explore airbnb,
+    // (2)airbnb plus explore
+    // (3) intro airbnbn adventures
+    // (4) places stay around world
+    // (5) popular destination us
+    // (6) featured airbnb plus
+    // (7) stay superhost
+    // (8) that next and prev button
+    // (9) footer
+    ;
+
+    @media only screen and (max-width:$bp-large ) {
+        grid-template-rows: 
+        [header-start] 100rem [header-end]
+        repeat(9,min-content)   ;
+    
+    }
+
+    // @media only screen and (max-height:1300px) {
+    //     grid-template-rows: 
+    //     [header-start] 100vh [header-end]
+    //     repeat(9,min-content)   ;
+    
+    // }
+
+    @media only screen and (max-width:$bp-medium) {
+        grid-template-rows: 
+        [header-start] 100rem [header-end]
+        repeat(9,min-content)   ; 
+    }
+
+    @media only screen and (max-width:$bp-small) {
+        grid-template-rows: 
+        [header-start] min-content [header-end]
+        repeat(9,min-content)   ; 
+    }
+
+    color: $default-landing-page-color;
+
+    // font-size: 2.5rem;
+
+}
+

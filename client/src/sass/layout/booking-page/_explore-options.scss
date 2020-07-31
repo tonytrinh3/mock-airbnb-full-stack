@@ -1,0 +1,24 @@
+.explore-homes-section{
+    // background-color: yellowgreen;
+    grid-column: center-start / center-end;
+}
+
+.more-homes-section{
+
+    &__cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(35rem,1fr));
+        // grid-template-rows: repeat(2, min-content);
+        grid-column-gap: $default-grid-column-gap;
+    }
+
+}
+
+.explore-options{
+    ul{
+        list-style: none;
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+

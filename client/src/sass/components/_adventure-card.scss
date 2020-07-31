@@ -1,0 +1,48 @@
+.adventure-card{
+    display: grid;
+
+    grid-template-rows: repeat(5,min-content);
+
+    margin-bottom: 2rem;
+
+    &__picture{
+        border-radius:$picture-border-radius-medium;
+        object-fit: cover;
+        width: 100%;
+    };
+
+    &__header{
+    
+       text-transform: uppercase;
+
+    };
+
+    &__description{
+ 
+    }
+
+    &__pricing{
+        margin-bottom: .5rem;
+        // white-space: nowrap;
+    }
+
+   
+
+    &__rating:before{
+        content: "\2605";
+  
+    }
+
+    &__continue_link{
+
+    }
+
+}
+
+.adventure-card-section{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+
+    grid-column-gap: $default-grid-column-gap;
+
+}

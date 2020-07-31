@@ -1,0 +1,47 @@
+.booking-card{
+
+    grid-column: col-start 6/center-end;
+    // grid-column: center-start / col-end 5;
+
+
+    display: grid;
+    // grid-template-columns: minmax(20rem,40rem);
+  
+    grid-template-rows: repeat(4,min-content);
+    width: 40rem;
+
+    padding: 2rem;
+
+    border: 0.1rem solid $airbnb-default-color-light-grey;
+    height: max-content;
+
+    @media only screen and (max-width:$bp-medium){
+        grid-column: col-start 5/center-end;
+        width: 40rem;
+
+    }
+
+    @media only screen and (max-width:$bp-small){
+
+        grid-column:center-start/center-end;
+        margin-top: 2rem;
+
+
+    }
+
+    &__reviews{
+        font-size: 1.5rem;
+        
+
+        &__amount{
+            color: $airbnb-default-color-light-grey;
+        }
+    }
+
+    &__reviews:before{
+        content: "\2605";
+    }
+
+
+
+}

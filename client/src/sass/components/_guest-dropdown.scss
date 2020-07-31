@@ -1,0 +1,74 @@
+.date-guest-forms{
+
+    //  &__section{
+    //     margin-bottom: 2rem;
+    // }
+
+    &__guests{
+        cursor: pointer;
+        -webkit-user-select: none;  /* Chrome all / Safari all */
+        -moz-user-select: none;     /* Firefox all */
+        -ms-user-select: none;      /* IE 10+ */
+        user-select: none;          /* Likely future */      
+        z-index: 1000;
+        &__dropdown{
+            background-color: white;
+            display:grid;
+            grid-column: 1/-1;
+            //position absolute is the key for the drop down to over from the white box form
+            position: relative; //https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_text
+            grid-template-columns: 1fr minmax(min-content, 1fr);
+            border: 0.1rem solid $form-input-color;
+            border-radius:0.2rem;
+            grid-row-gap: 2rem;
+            padding: 1.5rem 0rem 1.5rem 1rem;
+            box-sizing:$default-box-shadow;
+            z-index: 1000;
+
+           &__type{
+              align-self:center;
+               &__person{
+                   justify-self: start;
+                   align-self: start;
+                   font-weight: 600;
+
+                   &__description{
+                    font-size: 1.5rem;
+                   }
+
+               }
+           }
+
+            &__counter{
+                display: grid;
+                grid-template-columns: min-content 5rem min-content;
+                justify-self: center;
+                align-self:center;
+
+                &__num{
+                    align-self:center;
+                    justify-self: center;
+                    padding: 2rem;
+                }
+    
+            }
+
+            &__close{
+                font-weight: 600;
+                text-decoration: underline;
+                cursor: pointer;
+                // padding: 1rem;
+            }
+
+            &__close:hover{
+                padding: 0 1rem;
+                background-color: lighten($form-input-color, 50%);
+                justify-self: start;
+            }
+    
+        }
+
+    }
+ 
+}
+

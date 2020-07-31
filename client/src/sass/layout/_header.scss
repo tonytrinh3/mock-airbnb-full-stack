@@ -1,0 +1,54 @@
+.header{
+    // grid-row: [header-start] / [header-end];
+    grid-column:full-start/full-end;
+    
+    //https://wallpaperscraft.com/search/?order=&page=1&query=san+francisco&size=3840x2400
+    //background-image: linear-gradient(rgba(blue, .10), rgba(green, .10)), url(../../img/san-francisco-3.png);
+    background-image: url(../../img/san-francisco-6.jpg);//https://www.w3schools.com/css/css3_object-fit.asp
+    background-size: cover;
+    background-position: center;
+
+    display:grid;
+   
+    grid-template-columns: [full-start] minmax(1rem,10rem) minmax(min-content,55rem) 1fr [full-end];
+    grid-template-rows: min-content min-content 1fr;
+
+    @media only screen and (max-width:$bp-small) {
+        grid-template-columns:1fr;
+        grid-template-rows: min-content min-content ;
+
+        background-image:none;
+    }
+
+    &__caption{
+        grid-column: 1/-1;
+        grid-row: 3;
+        color: white;
+        font-weight: 600;
+        line-height: 1.7;
+        font-size: 1.9rem;
+        text-align: right;
+        
+        justify-self: end; ///https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self
+        align-self: end;
+        
+        margin-right: 5rem;
+        margin-bottom: 5rem;
+   
+   
+        @media only screen and (max-width:$bp-small) {
+            display: none;
+        }
+
+    }
+
+    &__caption:hover{
+    //https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-thickness
+    text-decoration: underline;
+    //text-decoration: underline solid blue 1px;
+    
+    }
+    
+}
+
+

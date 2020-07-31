@@ -1,0 +1,60 @@
+{
+    "id": 1,
+    "title":"Civic Center Views from a Contemporary City Pad",
+    "reservations":[
+        {
+            "userId":"1159",
+            "userResId": 23
+        },
+        {
+            "userId":"1159",
+            "userResId": 24
+        },
+        {
+            "userId":"2385",
+            "userResId": 40
+        }
+    ]
+},
+{
+    "id": 23,
+    "bookingId": 1,
+    "startDate": "June 10th 2020",
+    "endDate": "June 13th 2020",
+    "userId": "1159" // from Google Auth
+},
+{
+    "id": 24,
+    "bookingId": 1,
+    "startDate": "July 1st 2020",
+    "endDate": "August 17th 2020",
+    "userId": "1159" // from Google Auth
+},
+
+{
+    "id": 40,
+    "bookingId": 1,
+    "startDate": "June 20th 2020",
+    "endDate": "June 26th 2020",
+    "userId": "2385" // from Google Auth
+}
+
+
+{
+    "id":1,
+    "name": "Bill",
+    "userId": "1159" // from Google Auth
+},
+
+
+{   
+    "id":2,
+    "name": "Kathy",
+    "userId": "2385" // from Google Auth
+},
+
+{
+    "id":3,
+    "name": "Karen",
+    "userId": "3832" // from Google Auth
+},

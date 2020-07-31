@@ -1,0 +1,49 @@
+.trips-page{
+
+   
+    display:grid;
+    // grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns: [full-start] minmax(10rem, 1fr) 
+    [center-start] repeat(8, [col-start] minmax(min-content,25rem) [col-end]) [center-end] 
+    minmax(10rem, 1fr) [full-end];
+
+    grid-template-rows: min-content;
+
+    @media only screen and (max-width:$bp-small){
+        grid-template-columns: [full-start center-start]
+       repeat(8, [col-start] minmax(min-content,1fr) [col-end]) 
+         [center-end full-end];
+    }
+
+
+    &__header{
+        grid-column: center-start / center-end;
+
+        @media only screen and (max-width:$bp-small){
+            margin: 2rem;
+
+         
+        }
+       
+    }
+
+    &__cards{
+        grid-column: center-start/ center-end;
+        // background-color: red;
+        grid-gap: 5rem;
+
+        display: grid;
+        grid-template-columns: repeat(3,minmax(50rem, 1fr));
+
+        @media only screen and (max-width:$bp-small){
+            margin: 2rem;
+            grid-template-columns: 1fr;
+         
+        }
+
+        
+    }
+
+
+}

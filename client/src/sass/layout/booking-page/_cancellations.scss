@@ -1,0 +1,10 @@
+.cancellations{
+    // background-color: aquamarine;
+    grid-column: center-start / center-end;
+
+    &__rules ul{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        list-style: none;
+    }
+}

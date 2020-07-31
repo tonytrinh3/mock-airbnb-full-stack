@@ -1,0 +1,30 @@
+.popular-destination {
+    grid-column:center-start/center-end;
+
+    
+    &__tiles{
+        display:grid;
+        // grid-template-rows: repeat(2,min-content);
+        grid-template-columns: repeat(5,minmax(30rem,1fr));
+        // justify-items: center;
+
+        @media only screen and (max-width: $bp-large){
+            grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+        }
+    }
+
+    &__tile{
+        display:grid;
+        grid-template-rows: repeat(2,min-content);
+
+        &__state{
+            font-weight: 700;
+
+        }
+
+        &__pricing{
+            color: $airbnb-default-color-light-grey;
+        }
+    }
+
+}

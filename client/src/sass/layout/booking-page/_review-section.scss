@@ -1,0 +1,48 @@
+.review-section{
+    // background-color: orange;
+    grid-column: center-start/center-end;
+
+    // @media only screen and (max-width:$bp-largest){
+    //     display: none;
+       
+    //   }
+
+    &__preview{
+        display:grid;
+        grid-template-columns: repeat (3,1fr);
+
+        &--review{
+            grid-column: 1/2;
+        }
+
+        &--review:before{
+            content: "\2605";
+        }
+    
+        &--count{
+            grid-column: 2/3;
+        }
+        &--search{
+            grid-column: 3/3;
+        }
+    }
+
+    &__breakdown{
+        list-style: none;
+        display:grid;
+        grid-template-columns: repeat(4,1fr);
+
+        &--review:before{
+            content: "\2605";
+        }
+    }
+
+    &__hr{
+        grid-column: center-start/center-end;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+
+}
+

@@ -1,0 +1,17 @@
+.listing-page{
+    display: grid;
+
+    grid-template-columns: 
+    minmax(80rem,max-content) 1fr;
+
+    @media only screen and (max-width:$bp-small){
+        grid-template-columns: 1fr
+     
+    }
+    // grid-template-rows: 10rem;
+
+    // background-color: red;
+
+ 
+}
+

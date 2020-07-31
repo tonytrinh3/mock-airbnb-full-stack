@@ -1,0 +1,31 @@
+.google-map{
+
+    grid-column: 2;
+    // position: fixed;
+    // right: 0rem;
+   
+    // height: 50vh;
+    // width: 50vw;
+    // background-color: red;
+
+    @media only screen and (max-width:$bp-largest){
+        display:none;
+    }
+
+    &__marker{
+        color: blue;
+    }
+
+    &__info-window{
+        // height: 20vh;
+        // width: 10vw;
+        // display: grid;
+
+        &__header{
+            // text-overflow: ellipsis;
+            // white-space: nowrap;
+            // overflow: hidden;
+        }
+    }
+    
+}

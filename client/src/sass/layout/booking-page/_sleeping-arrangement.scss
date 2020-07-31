@@ -1,0 +1,14 @@
+.sleeping-arrangement{
+    // background-color: gold;
+    grid-column: center-start / center-end;
+
+
+    &__img{
+        width: 50%;
+        // height: 20rem;
+
+            @media only screen and (max-width:$bp-medium){
+                width: 100%;
+            }
+    }
+}

@@ -1,0 +1,14 @@
+.amenities{
+    // background-color: lightblue;
+    grid-column: center-start / center-end;
+}
+
+.amenities__column{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.amenities__item{
+    margin-bottom: 2rem;
+}

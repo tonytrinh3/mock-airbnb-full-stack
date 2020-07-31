@@ -1,0 +1,7 @@
+160243611853-ctm8nfdd46qt3rka0pmrqmocf9fel4c6.apps.googleusercontent.com
+client id
+
+
+09ucPqlGJsmvToM4_7m7nHXl
+
+your client secret
