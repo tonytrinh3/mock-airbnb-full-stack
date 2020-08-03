@@ -22,8 +22,10 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
+// console.log("awef", process.env.REACT_APP_STRIPE_KEY );
 
-// console.log("aewf",process.env.REACT_APP_GOOGLE_MAP);
+
+// console.log("aewf", process.env.REACT_APP_GOOGLE_MAP);
 // console.log(process.env.NODE_ENV)
 
 // If you want your app to work offline and load faster, you can change

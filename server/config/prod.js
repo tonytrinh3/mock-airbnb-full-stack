@@ -1,6 +1,8 @@
 module.exports = {
     googleClientID: process.env.GOOGLE_CLIENT_ID,
     googleClientSecret: process.env.GOOGLE_CLIENT_ID,
-    mongoURI: "mongodb+srv://tony:05CDA1Amy7gMtv2e@mock-airbnb.zlc6a.mongodb.net/mock-airbnb?retryWrites=true&w=majority",
-    cookieKey: 'jlkjfdklajfdajiejijijfdf'
+    mongoURI: process.env.MONGO_URI,
+    cookieKey: process.env.COOKIE_KEY,
+    stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
+    stripeSecretKey: process.env.STRIPE_SECRET_KEY,
 }

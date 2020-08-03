@@ -1,5 +1,6 @@
 import React from 'react';
 import DateAndGuestsForm from '../DateAndGuestsForm'
+import Payments from '../Payments';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import { fetchUser } from '../../actions/index';
@@ -26,7 +27,10 @@ class LandingForm extends React.Component{
                     <br/> stay and things to do.
                 </h2>
                 <a href="/auth/google" className="awef">sign in gogole here</a>
-                {/* <p className="awef">{this.props.secondAuth.googleId}</p> */}
+                <a href="/api/logout" className="awef">log out</a>
+                <p className="awef">Credits {this.props.auth? this.props.auth.credits :null}</p>
+                <Payments></Payments>
+
                 <div className="landing-page-form__section">
                     <h3 className ="header-small margin-bottom-medium">WHERE</h3>
                     <input className = "landing-page-form__input input-default margin-bottom-medium-2 " type="text" id="location" name="location" placeholder="San Francisco" />
@@ -51,9 +55,10 @@ class LandingForm extends React.Component{
 const mapStateToProps = (state)=>{
     console.log(state);
     return {
-        secondAuth: state.auth.testProfile
+        auth: state.auth.testProfile
     }
 }
 
 // export default LandingForm;
 export default connect(mapStateToProps, {fetchUser} )(LandingForm);
+

@@ -10,7 +10,7 @@ const INITIAL_STATE = {
 
 
 export default (state = INITIAL_STATE, action) =>{
-    console.log(action);
+    // console.log(action);
     switch (action.type){
         case SIGN_IN:
             //take whatever is in that state and return it in new object
