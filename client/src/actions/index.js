@@ -94,7 +94,7 @@ export const deleteBooking = (id) => async dispatch =>{
     dispatch ({type: DELETE_BOOKING, payload: id });
 }
 
-export const createUserReservation = (reservation)=>{
+export const xcreateUserReservation = (reservation)=>{
     return async (dispatch, getState) =>{
         //getState is another function from redux to reach other to other reducers and get the state and use it in other reducers
         //this will be helpful when creating a reservation for the user
@@ -102,8 +102,6 @@ export const createUserReservation = (reservation)=>{
         //auth is the name of the auth state in redux store
         // console.log(getState().auth);
         const {userId} = getState().auth.userProfile;
-
-        
 
         //this user variable ends up in the db.json
         // const bookingInfo = getState().bookings[bookingId];
@@ -126,6 +124,23 @@ export const createUserReservation = (reservation)=>{
         //  console.log(test);
     }
 };
+
+export const createUserReservation = (reservation)=>{
+    return async (dispatch, getState) =>{
+
+        const {userId} = getState().auth.userProfile;
+
+        const response = await axios.post(`/api/reservations`,{...reservation,userId});
+ 
+        dispatch({type: CREATE_USER_RESERVATION, payload: response.data});
+
+        history.push('/trips/');
+  
+    }
+};
+
+
+
 
 export const fetchUserReservations = () => async dispatch =>{
     const response = await bookings.get('/user');

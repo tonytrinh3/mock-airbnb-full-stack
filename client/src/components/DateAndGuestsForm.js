@@ -6,7 +6,7 @@ import { DateRangePicker } from 'react-dates';
 import moment from 'moment';
 
 import { connect } from 'react-redux';
-import {createUserReservation, createUserReservationTEMP,increaseIDTEMP} from "../actions";
+import {createUserReservation, createUserReservationTEMP,increaseIDTEMP } from "../actions";
 
 
 
@@ -91,21 +91,17 @@ class DateAndGuestsForm extends React.Component{
         } = this.state;
 
         const reservation = {
-            "reservation": {
-                bookingId,
-                startDate: moment(startDate).format('MMMM Do YYYY'),
-                endDate: moment(endDate).format('MMMM Do YYYY'),
-                numAdults,
-                numChildren,
-                numInfants,
-                title,
-                description,
-                location,
-                imgs
-            
-            }
-
-        }
+            bookingId,
+            startDate: moment(startDate).format('MMMM Do YYYY'),
+            endDate: moment(endDate).format('MMMM Do YYYY'),
+            numAdults,
+            numChildren,
+            numInfants,
+            title,
+            description,
+            location,
+            imgs
+        };
 
         if(startDate === null || endDate === null || numTotal ===0 || !this.props.isSignedIn){
             this.setState({
@@ -120,8 +116,8 @@ class DateAndGuestsForm extends React.Component{
             //disabled this UNTIL express and mongodb to come into play
             // this.props.createUserReservation(reservation);
             this.props.increaseIDTEMP();//to increase id for reservations for user to make more reservations
-            this.props.createUserReservationTEMP(reservation);
-            
+            // this.props.createUserReservationTEMP(reservation);
+            this.props.createUserReservation(reservation);
         }
         
         // if(!(startDate === null) && !(endDate === null) && numTotal > 0 ){
