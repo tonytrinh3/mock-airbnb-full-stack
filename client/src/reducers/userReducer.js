@@ -10,13 +10,15 @@ import {
 //actions are just functions that carry the data and what type that data is
 //then actions tell the reducers how to change that state 
 
+
 export default (state = {}, action) =>{
 
 
     switch(action.type){
         case FETCH_USER_RESERVATIONS:
             // console.log(state);
-            return {...state, ..._.mapKeys(action.payload, "id")};
+            // return {...state, ..._.mapKeys(action.payload, "id")};
+            return action.payload; 
         case CREATE_USER_RESERVATION:
             return {...state, [action.payload.id]: action.payload};
         default: 

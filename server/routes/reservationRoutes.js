@@ -3,7 +3,17 @@ const mongoose = require ('mongoose');
 const Reservation = mongoose.model('reservation'); 
 
 module.exports = app => {
-    app.post('/api/reservations', async(req,res) =>{
+
+    app.get('/api/reservations', async (req,res) => {
+        
+        const reservation = await Reservation.find({ _userMongoId: req.user.id });
+        // const reservation = await Reservation.find({ bookingId: 9 });
+        // console.log(reservation);  
+        res.send(reservation);
+
+    });
+
+    app.post('/api/reservations',requireLogin, async(req,res) =>{
         const {
             userId,
             bookingId,

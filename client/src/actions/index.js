@@ -139,10 +139,15 @@ export const createUserReservation = (reservation)=>{
     }
 };
 
-
-
-
 export const fetchUserReservations = () => async dispatch =>{
+    const response = await axios.get(`/api/reservations`);
+
+    dispatch({type: FETCH_USER_RESERVATIONS, payload: response.data});
+}
+
+
+
+export const xfetchUserReservations = () => async dispatch =>{
     const response = await bookings.get('/user');
 
     dispatch({type: FETCH_USER_RESERVATIONS, payload: response.data});
