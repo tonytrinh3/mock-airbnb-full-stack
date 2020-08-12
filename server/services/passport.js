@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const keys = require('../config/keys');
 
 
-const User = mongoose.model('users'); 
+const User = mongoose.model('user'); 
 
 //user is a mongoose modle instance. and turn it into user.id
 passport.serializeUser((user,done)=>{

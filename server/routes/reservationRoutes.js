@@ -1,6 +1,7 @@
 const requireLogin = require('../middlewares/requireLogin');
 const mongoose = require ('mongoose');
 const Reservation = mongoose.model('reservation'); 
+//const Booking = mongoose.model('booking'); 
 
 module.exports = app => {
 
@@ -14,6 +15,10 @@ module.exports = app => {
     });
 
     app.post('/api/reservations',requireLogin, async(req,res) =>{
+
+        //maybe you also have to do like find the Booking to the get id
+
+        console.log(req.body);
         const {
             userId,
             bookingId,
@@ -40,7 +45,7 @@ module.exports = app => {
             description,
             location,
             imgs,
-            _userMongoId: req.user.id,
+            _userMongoId: req.user.id
         });
 
         try {

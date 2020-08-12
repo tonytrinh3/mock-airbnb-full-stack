@@ -50,7 +50,7 @@
     },
     "cancellations": {
       "refundable": true,
-      "type": "flexible"
+      "cancellation_type": "flexible"
     },
     "amenities": [
       "kitchen",
@@ -168,7 +168,7 @@
     },
     "cancellations": {
       "refundable": true,
-      "type": "flexible"
+      "cancellation_type": "flexible"
     },
     "amenities": [
       "kitchen",
@@ -286,7 +286,7 @@
     },
     "cancellations": {
       "refundable": true,
-      "type": "flexible"
+      "cancellation_type": "flexible"
     },
     "amenities": [
       "kitchen",
@@ -404,7 +404,7 @@
     },
     "cancellations": {
       "refundable": true,
-      "type": "flexible"
+      "cancellation_type": "flexible"
     },
     "amenities": [
       "kitchen",

@@ -13,7 +13,16 @@ const reservationSchema = new Schema({
     description: String,
     location: String,
     imgs: Schema.Types.Mixed,
-    _userMongoId: {type:Schema.Types.ObjectId, ref: 'User'},
+    _userMongoId: {
+        type: Schema.Types.ObjectId, 
+        ref: 'user',
+        required: [true, 'Review must belong to a user']
+    },
+    // _bookingMongoId: {
+    //     type: Schema.Types.ObjectId,
+    //     ref: "booking",
+    //     required: [true, "Review must belong to a booking"]
+    // }
 });
 
 mongoose.model('reservation', reservationSchema)

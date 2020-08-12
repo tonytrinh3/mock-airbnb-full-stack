@@ -1,0 +1,31 @@
+[
+    {
+        "name": "Jasmine",
+        "date": "2020-01-01",
+        "img": "something",
+        "description": "Loved Lance’s place! Great views of the city, amazing garden and really comfy bed that we didn’t want to leave. You’ll definitely want a car or get a car back because the hill is quite steep but totally worth it. Can’t wait to stay again!",
+        "cleanliness": 5,
+        "check_in": 5,
+        "value": 5,
+        "accuracy": 5,
+        "communication": 5,
+        "location": 5,
+        "overall": 5,
+        "_userMongoId": "5f236f16f4d85432ec18e3d2"
+    },
+    {
+        "name": "Natasha",
+        "date": "2020-02-01",
+        "img": "something",
+        "description": "HIS PLACE IS AMAZING !",
+        "cleanliness": 4.5,
+        "check_in": 4,
+        "value": 4,
+        "accuracy": 4,
+        "communication": 4,
+        "location": 4,
+        "overall": 4,
+        "_userMongoId": "5f236f16f4d85432ec18e3d2"
+    }
+  ]
+  

@@ -8,8 +8,8 @@ const morgan = require('morgan');
 
 
 require('./models/User');
-require('./models/Reservation');
 require('./models/Booking');
+require('./models/Reservation');
 require('./services/passport');
 const authRoutes = require('./routes/authRoutes');
 
